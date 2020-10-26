@@ -15,7 +15,7 @@ TagManager:
   - 
   - Character
   - Projectile
-  - 
+  - Bound
   - 
   - 
   - 
@@ -38,9 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Hey
     uniqueID: 2906327403
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
