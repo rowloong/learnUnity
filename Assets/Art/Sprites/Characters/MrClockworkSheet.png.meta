@@ -431,7 +431,7 @@ TextureImporter:
         height: 255.8
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 5}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -509,10 +509,10 @@ TextureImporter:
       name: MrClockworkFixed3
       rect:
         serializedVersion: 2
-        x: 256
+        x: 260
         y: 5
-        width: 256
-        height: 256
+        width: 252
+        height: 244
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -536,7 +536,7 @@ TextureImporter:
         height: 255.8
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
