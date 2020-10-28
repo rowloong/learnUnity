@@ -72,7 +72,10 @@ public class RubyControl : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount,0,maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
         Debug.Log(currentHealth);
-        animator.SetTrigger("Hit");
+        if (amount < 0)
+        {
+            animator.SetTrigger("Hit");
+        }
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 
