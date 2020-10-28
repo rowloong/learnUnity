@@ -26,7 +26,7 @@ public class RubyControl : MonoBehaviour
         //Application.targetFrameRate = 60;
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        currentHealth = 1;
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -65,7 +65,6 @@ public class RubyControl : MonoBehaviour
         Vector2 position = rigidbody2d.position;
         position.x = position.x + speed * horizontal * Time.deltaTime;
         position.y = position.y + speed * vertical * Time.deltaTime;
-
         rigidbody2d.MovePosition(position);
     }
 
@@ -74,6 +73,7 @@ public class RubyControl : MonoBehaviour
         Debug.Log(currentHealth + "/" + maxHealth);
         Debug.Log(currentHealth);
         animator.SetTrigger("Hit");
+        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 
     void Launch()

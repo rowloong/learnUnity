@@ -244,10 +244,10 @@ RectTransform:
   m_Father: {fileID: 601129206}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.40752658, y: 0.363}
-  m_AnchorMax: {x: 0.9620001, y: 0.697885}
-  m_AnchoredPosition: {x: -0.00011444092, y: 0}
-  m_SizeDelta: {x: 0.00011444092, y: -0.00002861023}
+  m_AnchorMin: {x: 0.41064474, y: 0.363}
+  m_AnchorMax: {x: 0.95684224, y: 0.69555753}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &152882694
 MonoBehaviour:
@@ -311,8 +311,9 @@ GameObject:
   - component: {fileID: 167763656}
   - component: {fileID: 167763658}
   - component: {fileID: 167763657}
+  - component: {fileID: 167763659}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: 'UIHealthBar '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,10 +333,10 @@ RectTransform:
   m_Father: {fileID: 152882693}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 46, y: 0}
-  m_SizeDelta: {x: 92, y: 0}
+  m_AnchoredPosition: {x: 44.5, y: -11}
+  m_SizeDelta: {x: 89, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &167763657
 MonoBehaviour:
@@ -375,6 +376,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167763655}
   m_CullTransparentMesh: 0
+--- !u!114 &167763659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167763655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e4d912421c33c4ea1f3d0e0974323a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask: {fileID: 152882695}
 --- !u!1 &213920886
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213920886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.82, y: -3.23, z: -10}
+  m_LocalPosition: {x: -5.16, y: -2.24, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 73718796}
@@ -5574,6 +5588,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5407794381936568385, guid: e41964f9e426dc142bd302fb414371d9, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3899410941478852858, guid: e41964f9e426dc142bd302fb414371d9, type: 3}
       propertyPath: looping
       value: 1
@@ -5799,7 +5817,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089398538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.0010996, y: -2.2090688, z: -10}
+  m_LocalPosition: {x: -0.32545757, y: -2.2090685, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5922,11 +5940,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 277039830987233061, guid: 1ad98352135832c409509021b957bcbc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.82
+      value: -5.16
       objectReference: {fileID: 0}
     - target: {fileID: 277039830987233061, guid: 1ad98352135832c409509021b957bcbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.23
+      value: -2.24
       objectReference: {fileID: 0}
     - target: {fileID: 277039830987233061, guid: 1ad98352135832c409509021b957bcbc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5978,6 +5996,10 @@ PrefabInstance:
       objectReference: {fileID: 8896545565681430939, guid: 3f82dd4e17750f0418e2059af544e3b3, type: 3}
     - target: {fileID: 6711082594563417863, guid: 1ad98352135832c409509021b957bcbc, type: 3}
       propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711082594563417863, guid: 1ad98352135832c409509021b957bcbc, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
