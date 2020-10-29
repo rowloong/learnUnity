@@ -53,6 +53,22 @@ public class RubyControl : MonoBehaviour
             Launch();
         }
 
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f,
+                lookDirection, 1.5f, LayerMask.GetMask("NPC"));
+            if (hit.collider != null)
+            {
+                string name = hit.collider.gameObject.name;
+                Debug.Log("Raycast has hit the object " + hit.collider.gameObject + " " + name);
+                NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
+                if (character != null)
+                {
+                    character.DisplayDialog();
+                }
+            }
+        }
+
         /*   Debug.Log(horizontal +    "=>" + "32312");
              Vector2 position = transform.position;
              position.x = position.x + 3.1f * horizontal * Time.deltaTime; ;
