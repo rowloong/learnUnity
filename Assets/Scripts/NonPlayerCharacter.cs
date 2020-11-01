@@ -34,6 +34,6 @@ public class NonPlayerCharacter : MonoBehaviour
     {
         timerDisplay = displayTime;
         dialogBox.SetActive(true);
-        Debug.Log("111");
+        Debug.Log("111" + dialogBox);
     }
 }
