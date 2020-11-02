@@ -19,6 +19,8 @@ public class RubyControl : MonoBehaviour
 
     public int health { get { return currentHealth; } }
 
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class RubyControl : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -106,5 +109,11 @@ public class RubyControl : MonoBehaviour
         projectile.Launch(lookDirection, 300);
         animator.SetTrigger("Launch");
 
+    }
+
+
+    public void PlayerSound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }
